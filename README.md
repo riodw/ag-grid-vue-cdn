@@ -1,6 +1,6 @@
 # ag-grid-vue-cdn
 
-#### Link to file to include
+_Link to file to include_
 
 https://github.com/riodw/ag-grid-vue-cdn/blob/master/node_modules/ag-grid-vue/dist/ag-grid-vue.umd.js
 
@@ -8,12 +8,12 @@ https://github.com/riodw/ag-grid-vue-cdn/blob/master/node_modules/ag-grid-vue/di
 
 ### Create slut repository
 
-```
+```shell
 npm install -g @vue/cli
 vue create my-project
 ```
 
-```
+```shell
 enter
 enter
 y
@@ -21,31 +21,31 @@ y
 
 ### Install ag-grid
 
-```
+```shell
 npm install --save ag-grid-community ag-grid-vue vue-property-decorator
 ```
 
 ### Go to the ag-grid-vue package
 
-```
+```shell
 cd node_modules/ag-grid-vue/
 ```
 
 ### Install ag-grid-vue's dependencies
 
-```
+```shell
 npm install
 ```
 
 ### Create `tsconfig-lib.json`
 
-```
+```shell
 nano tsconfig-lib.json
 ```
 
 ### Paste in json
 
-```
+```json
 // from here https://www.ag-grid.com/ag-grid-angular-webpack/#tsconfig-json
 {
   "compilerOptions": {
@@ -57,30 +57,28 @@ nano tsconfig-lib.json
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "lib": ["dom","es2015"]
+    "lib": ["dom", "es2015"]
   },
   "compileOnSave": true,
-  "exclude": [
-    "node_modules/*"
-  ]
+  "exclude": ["node_modules/*"]
 }
 ```
 
 ### Clone ag-grid src
 
-```
+```shell
 svn checkout https://github.com/ag-grid/ag-grid/trunk/packages/ag-grid-vue/src
 ```
 
 ### Create `tsconfig.json`
 
-```
+```shell
 nano tsconfig.json
 ```
 
 ### Paste in json
 
-```
+```json
 // tsconfig.json
 {
   "compilerOptions": {
@@ -92,18 +90,16 @@ nano tsconfig.json
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "lib": ["dom","es2015"]
+    "lib": ["dom", "es2015"]
   },
   "compileOnSave": true,
-  "exclude": [
-    "node_modules/*"
-  ]
+  "exclude": ["node_modules/*"]
 }
 ```
 
 You should have these files in the `dist/` folder
 
-```
+```shell
 ag-grid-vue.common.js
 ag-grid-vue.common.js.map
 ag-grid-vue.umd.js
